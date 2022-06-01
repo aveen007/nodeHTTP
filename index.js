@@ -1,0 +1,19 @@
+const http=require('http');
+const hostname='localhost';
+const port='3000';
+
+const server=http.createServer((req,res)=>{
+
+
+
+    console.log(req.headers);
+    res.statusCode=200;
+    res.setHeader('content-type','text/html');
+    res.end('<html><body><h1>HELLO WORLD!</body></h1></html>')
+});
+
+server.listen(port,hostname,()=>{
+
+
+    console.log(`server set at :http://  ${hostname}:${port} `);
+}); 
